@@ -1,5 +1,6 @@
 #!/bin/sh
 tmux new -s SERVER -n REDIS -d
+tmux send-keys -t SERVER 'mysql.server restart'
 tmux send-keys -t SERVER 'cd ~/oneflare/site' C-m
 tmux send-keys -t SERVER 'redis-server' C-m
 
