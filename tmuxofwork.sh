@@ -13,7 +13,7 @@ tmux send-keys -t WORK:3 'vim' C-m
 
 tmux new-window -n Bash -t WORK
 tmux send-keys -t WORK:4 'cd ~/oneflare/site' C-m
-tmux select-window -t WORK:1 
+tmux select-window -t WORK: 3
 tmux attach -t WORK
 
 
