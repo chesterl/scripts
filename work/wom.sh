@@ -1,20 +1,20 @@
 #!/bin/sh
-tmux new -s WOM -n CONSOLE -d
-tmux send-keys -t WOM 'cd ~/oneflare/womo' C-m
-tmux send-keys -t WOM 'rails c' C-m
+tmux new -s wom -n console -d
+tmux send-keys -t wom 'cd ~/oneflare/womo' C-m
+tmux send-keys -t wom 'rails c' C-m
 
-tmux new-window -n RSPEC -t WOM
-tmux send-keys -t WOM:2 'cd ~/oneflare/womo' C-m
-tmux send-keys -t WOM:2 'guard' C-m
+tmux new-window -n test -t wom
+tmux send-keys -t wom:2 'cd ~/oneflare/womo' C-m
+tmux send-keys -t wom:2 'guard' C-m
 
-tmux new-window -n SITE -t WOM
-tmux send-keys -t WOM:3 'cd ~/oneflare/womo' C-m
-tmux send-keys -t WOM:3 'vim' C-m
+tmux new-window -n site -t wom
+tmux send-keys -t wom:3 'cd ~/oneflare/womo' C-m
+tmux send-keys -t wom:3 'vim' C-m
 
-tmux new-window -n SERVER -t WOM
-tmux send-keys -t WOM:4 'cd ~/oneflare/womo' C-m
-tmux send-keys -t WOM:4 'rails s' C-m
-tmux select-window -t WOM:3
-tmux attach -t WOM
+tmux new-window -n server -t wom
+tmux send-keys -t wom:4 'cd ~/oneflare/womo' C-m
+tmux send-keys -t wom:4 'rails s' C-m
+tmux select-window -t wom:3
+tmux attach -t wom
 
 
